@@ -1,6 +1,3 @@
-import "assert";
-import "mocha";
-import "should";
 import { TimeTracker } from "./time-tracker";
 
 describe("time-tracker", () => {
@@ -19,7 +16,7 @@ describe("time-tracker", () => {
     D.step("D-3");
     D.complete();
     tracker.complete();
-    [
+    let testcase = [
       "TEST : 0.00s",
       "  ├ A : 0.00s",
       "  │ ├ A-1 : 0.00s",
@@ -31,8 +28,7 @@ describe("time-tracker", () => {
       "    ├ D-1 : 0.00s",
       "    ├ D-2 : 0.00s",
       "    └ D-3 : 0.00s",
-    ]
-      .join("\n")
-      .should.be.equal(tracker.toString());
+    ].join("\n");
+    expect(testcase).toBe(tracker.toString());
   });
 });
