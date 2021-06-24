@@ -10,6 +10,7 @@
     "test": "jest",
     "test:coverage": "jest --coverage"
   },
+  "repository": "https://github.com/EJayCheng/util",
   "author": "EJay Cheng",
   "license": "MIT",
   "devDependencies": {
